@@ -24,39 +24,38 @@ let instructProjectContributions = "Ab sequi ex consectetur inventore itaque vit
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
-fs.writeFile('README.md',`
-    <h1 id="project-title">${projectNameInput}</h1> 
-    [GitHub license](https://img.shields.io/badge/license-${projectLicense}-blue.svg)
-    <h2 id="table-contents">Table of Contents</h2>
-    - [Top](#project-title)
-    - [Description](#project-desc)
-    - [Installation](#project-install)
-    - [Usage](#project-usage)
-    - [Contributing](#project-contributing)
-    - [Tests](#project-tests)
-    - [Questions/Contact](#project-contact)
-    
-    <h2 id="project-desc">Description</h2>
-        ${projectDescription}
-        <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
-    <h2 id="project-install">Installation</h2>
-        ${commandLineInstallInput}
-        <p style='text-align: right;'><a href="#project-title">Back to Table</a></p>
-    <h2 id="project-usage">Usage</h2>
-        ${instructProjectUsage}
-        <p style='text-align: right;'><a href="#project-title">Back to Table</a></p>
-    <h2 id="project-contributing">Contributing</h2>
-        ${instructProjectContributions}
-        <p style='text-align: right;'><a href="#project-title">Back to Table</a></p>
-    <h2 id="project-tests">Tests</h2>
-        ${commandLineTestInput}
-        <p style='text-align: right;'><a href="#project-title">Back to Table</a></p>
-    <h2 id="project-tests">Questions / Contact</h2>
-    - [View my GitHub](https://github.com/${usernameInput})
-    - Reach out directly with questions: ${emailAddressInput}
-        <p style='text-align: right;'><a href="#project-title">Back to Table</a></p>
-    `, (err) =>
-    err ? console.error(err) : console.log('Check directory for details')
+fs.writeFile('README_output.md',
+`<h1 id="project-title">${projectNameInput}</h1>\n 
+![GitHub license](https://img.shields.io/badge/license-${projectLicense}-blue.svg)\n
+\n
+<h2 id="table-contents">Table of Contents</h2>\n
+-[Description](#project-desc)\n
+-[Installation](#project-install)\n
+-[Usage](#project-usage)\n
+-[Contributing](#project-contributing)\n
+-[Tests](#project-tests)\n
+-[Questions/Contact](#project-contact)\n
+
+<h2 id="project-desc">Description</h2>
+    ${projectDescription}
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+<h2 id="project-install">Installation</h2>
+    ${commandLineInstallInput}
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+<h2 id="project-usage">Usage</h2>
+    ${instructProjectUsage}
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+<h2 id="project-contributing">Contributing</h2>
+    ${instructProjectContributions}
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+<h2 id="project-tests">Tests</h2>
+    ${commandLineTestInput}
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+<h2 id="project-contact">Questions / Contact</h2>\n
+-[View my GitHub](https://github.com/${usernameInput}) \n
+-Reach out directly with questions: ${emailAddressInput} \n
+<p style='text-align: right;'><a href="#project-title">Back to Top</a></p>`, 
+(err) => err ? console.error(err) : console.log('Check directory for details')
 );
  
 // WHEN I enter my project title
