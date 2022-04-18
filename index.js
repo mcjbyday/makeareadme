@@ -26,7 +26,7 @@ let instructProjectContributions = "Ab sequi ex consectetur inventore itaque vit
 
 fs.writeFile('README.md',`
     <h1 id="project-title">${projectNameInput}</h1> 
-    [GitHub license](https://img.shields.io/badge/license-${MIT}-blue.svg)
+    [GitHub license](https://img.shields.io/badge/license-${projectLicense}-blue.svg)
     <h2 id="table-contents">Table of Contents</h2>
     - [Top](#project-title)
     - [Description](#project-desc)
