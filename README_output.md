@@ -1,6 +1,6 @@
-<h1 id="project-title">MyProjectName MyProjectName</h1>
+<h1 id="project-title">pow</h1>
  
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+<img src="https://img.shields.io/badge/license-Eclipse Public License 2.0-blue.svg">
 
 
 
@@ -20,24 +20,28 @@
 
 
 <h2 id="project-desc">Description</h2>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod non illo obcaecati reiciendis. Id odit quibusdam similique quas, dolor placeat voluptatibus asperiores temporibus! Ab sequi ex consectetur inventore itaque vitae a quas fugiat eius? Voluptates ratione nemo molestiae, possimus necessitatibus corporis in magni illum dolores reprehenderit! Sint sit distinctio molestiae.
+    pow
     <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
 <h2 id="project-install">Installation</h2>
-    npm -foo -bar -buzz -bee
+    pow
     <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
 <h2 id="project-usage">Usage</h2>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod non illo obcaecati reiciendis.
+    pow
     <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
 <h2 id="project-contributing">Contributing</h2>
-    Ab sequi ex consectetur inventore itaque vitae a quas fugiat eius? Voluptates ratione nemo molestiae, possimus necessitatibus corporis in magni illum dolores reprehenderit! Sint sit distinctio molestiae.
+    pow
     <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
 <h2 id="project-tests">Tests</h2>
-    npm -test -this -prog -plz
+    pow
     <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
-<h2 id="project-tests">Questions / Contact</h2>
+<h2 id="project-tests">License</h2>
+    Licensed under: Eclipse Public License 2.0.
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+    
+<h2 id="project-contact">Questions / Contact</h2>
 
--[View my GitHub](https://github.com/MyGitHubUsername) 
+-View my [GitHub](https://github.com/pow) 
 
--Reach out directly with questions: MyEmailAddress@Internet.gov 
+-Reach out directly with questions: <pow> 
 
 <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>

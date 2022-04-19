@@ -1,32 +1,77 @@
+// to do store inputs from inquirer into an object
 let fs = require('fs');
+const inquirer = require('inquirer');
 
-// placeholder inputs are received
-// "what is your github username?
-let usernameInput = "MyGitHubUsername";
-// "what is your github email?
-let emailAddressInput = "MyEmailAddress@Internet.gov";
-// "what is your projec tname?
-let projectNameInput = "MyProjectName MyProjectName";
-// Short description 
-let projectDescription = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod non illo obcaecati reiciendis. Id odit quibusdam similique quas, dolor placeat voluptatibus asperiores temporibus! Ab sequi ex consectetur inventore itaque vitae a quas fugiat eius? Voluptates ratione nemo molestiae, possimus necessitatibus corporis in magni illum dolores reprehenderit! Sint sit distinctio molestiae.";
-// What license should your project have?.. select up or down on your license f
-let projectLicense = "MIT";
-// What command should be run to install dependences
-let commandLineInstallInput = "npm -foo -bar -buzz -bee";
-// What command shoudl be run to run tests?
-let commandLineTestInput = "npm -test -this -prog -plz";
-// What does the user need to know about using the repo? I wan'texcept pull requests
-let instructProjectUsage = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod non illo obcaecati reiciendis.";
-// What does the user need to now about contributing to the Repo?Please done
-let instructProjectContributions = "Ab sequi ex consectetur inventore itaque vitae a quas fugiat eius? Voluptates ratione nemo molestiae, possimus necessitatibus corporis in magni illum dolores reprehenderit! Sint sit distinctio molestiae.";
+licenses = [
+    'Apache License 2.0',
+    'GNU General Public License v3.0',
+    'MIT License',
+    'Boost Software License 1.0',
+    'Creative Commons Zero v1.0 Universal',
+    'Eclipse Public License 2.0',
+    'Mozilla Public License 2.0',
+];
 
-// GIVEN a command-line application that accepts user input
-// WHEN I am prompted for information about my application repository
-// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+inquirer
+  .prompt([
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'usernameInput',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'emailAddressInput',
+    },
+    {
+        type: 'input',
+        message: "What is your project's name?",
+        name: 'projectNameInput',
+    },
+    {
+        type: 'input',
+        message: "Please provide a short description for your project.",
+        name: 'projectDescription',
+    },
+    {
+        type: 'list',
+        message: "Select a license for this project.",
+        name: 'projectLicense',
+        editableList: false,
+        choices: licenses,
+    },
+    {
+        type: 'input',
+        message: "What command should be run to install dependences?",
+        name: 'commandLineInstallInput',
+    },
+    {
+        type: 'input',
+        message: "What command should be run in order to run tests?",
+        name: 'commandLineTestInput',
+    },
+    {
+        type: 'input',
+        message: "What information might a developer need to know about using the repository?",
+        name: 'instructProjectUsage',
+    },
+    {
+        type: 'input',
+        message: "What information might a developer need to know about contributing to the repository",
+        name: 'instructProjectContributions'
+    }], function(answers) {
+        console.log(JSON.stringify(answers, null, 2));
+})
+.then((response) => {
 
-fs.writeFile('README_output.md',
+    let {projectNameInput, projectLicense, projectDescription, commandLineInstallInput, instructProjectUsage, instructProjectContributions, commandLineTestInput, usernameInput, emailAddressInput} = response;
+  
+
+
+    fs.writeFile('README_output.md',
 `<h1 id="project-title">${projectNameInput}</h1>\n 
-![GitHub license](https://img.shields.io/badge/license-${projectLicense}-blue.svg)\n
+<img src="https://img.shields.io/badge/license-${projectLicense}-blue.svg">\n
 \n
 <h2 id="table-contents">Table of Contents</h2>\n
 -[Description](#project-desc)\n
@@ -51,12 +96,18 @@ fs.writeFile('README_output.md',
 <h2 id="project-tests">Tests</h2>
     ${commandLineTestInput}
     <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+<h2 id="project-tests">License</h2>
+    Licensed under: ${projectLicense}.
+    <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
+    
 <h2 id="project-contact">Questions / Contact</h2>\n
--[View my GitHub](https://github.com/${usernameInput}) \n
--Reach out directly with questions: ${emailAddressInput} \n
+-View my [GitHub](https://github.com/${usernameInput}) \n
+-Reach out directly with questions: <${emailAddressInput}> \n
 <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>`, 
-(err) => err ? console.error(err) : console.log('Check directory for details')
-);
+    (err) => err ? console.error(err) : console.log('Check directory for details'))
+});
+
+
  
 // WHEN I enter my project title
 // THEN this is displayed as the title of the README
