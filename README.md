@@ -25,15 +25,17 @@
     This repository contains a script that will automate the creation of a README.md file based on a handful of user inputs pertaining to the project's specific characteristics. 
 <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
 
-<h2 id="project-live">See it live!</h2>
+<h2 id="project-live">See it in action!</h2>
 
-[Screen Recording of Application](https://drive.google.com/drive.....)
+[Screen Recording of Application](https://drive.google.com/file/d/15LY7wv0GOnx-S-SLZlB8DE9BN3zJoa5F/view?usp=sharing)
 
+*Note: Output files will be written to the same directory where the script file lives.*
+<!-- 
 <h2 id="project-captures">Screen captures</h2>
 
 | Image | Description |
 | --- | ----------- |
-| ![Console Usage](./assets/screenshots/Screenshot1.png) | Console Usage |
+| ![Console Usage](./assets/screenshots/Screenshot1.png) | Console Usage | -->
 
 <h2 id="project-tech">Technology</h2>
 
