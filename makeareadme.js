@@ -66,7 +66,7 @@ inquirer
 .then((response) => {
     // deconstruct response object in order to display information in readme file to be written
     let {projectNameInput, projectLicense, projectDescription, commandLineInstallInput, instructProjectUsage, instructProjectContributions, commandLineTestInput, usernameInput, emailAddressInput} = response;
-  
+    // fs writefile includes filename, file contents, and error handling/success message if write is successful 
     fs.writeFile('README_output.md',
 `<h1 id="project-title">${projectNameInput}</h1>\n 
 <img src="https://img.shields.io/badge/license-${projectLicense}-blue.svg">\n
