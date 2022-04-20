@@ -55,7 +55,7 @@ To install Inquirer.js, run the following command in your local directory
 <h2 id="project-usage">Usage</h2>
 Recommended prerequisites include node.js version 16.2.0 or later. To execute the program run the following command in your local directory
 
-    `node makeareadme`
+    `node makeareadme.js`
 
 <p style='text-align: right;'><a href="#project-title">Back to Top</a></p>
 
